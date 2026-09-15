@@ -1,31 +1,52 @@
-package problema_b;
+package problema_2;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
-public class SalaEspera {
 
+public class Problema_2 {
+    
     public static void main(String[] args) {
-        List<String> jugadores = new ArrayList<>();
-        jugadores.add(" andres gomez ");
-        jugadores.add(" valeria rios ");
-        jugadores.add(" mateo mendoza ");
-        jugadores.add(" sofia castro ");
+       
+        List <String> materias = new ArrayList <>();
+        materias.add(" - piloto - emprendimiento ");
+        materias.add(" - estructura de datos ");
+        materias.add(" - base de datos ");
+        materias.add(" - piloto - proyecto de vida ");
+        materias.add(" - calculo integral ");
         
-        System.out.println(" \n posicion de los jugadores: ");
+        System.out.println(" \n lista de materias: ");
+        materias.forEach(System.out::println);
         
-        ListIterator<String> iterator = jugadores.listIterator();
+        System.out.println(" \n revision de materias: ");
         
+        ListIterator<String> iterator = materias.listIterator();
         while (iterator.hasNext()) {
-            int posicion = iterator.nextIndex() + 1;
-            String jugador = iterator.next();
-            System.out.println(" posicion " + posicion + ": " + jugador);
+            String materia = iterator.next();
+            System.out.println(" \n * revisando " + materia);
             
-            if (posicion == 1) {
-                iterator.add(" vip - lucas ramirez ");
+            if (materia.equals(" - piloto - emprendimiento ")) {
+                iterator.remove();
+                System.out.println(" -> se elimino por ser piloto");
+            
             }
+            
+            if (materia.equals(" - piloto - proyecto de vida ")) {
+                iterator.remove();
+                System.out.println(" -> se elimino por ser piloto ");
+            
+            }
+            
+        
         }
+        
+        System.out.println("\n lista final de materias: ");
+        materias.forEach(System.out::println);
+        
+    }
+    
+}
         
         System.out.println(" \n posicion de los jugadores (invertida): ");
         while (iterator.hasPrevious()) { 
