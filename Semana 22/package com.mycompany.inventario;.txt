@@ -1,0 +1,47 @@
+package com.mycompany.inventario;
+
+import java.util.LinkedList;
+
+public class Inventario {
+
+    public static void main(String[] args) {
+        LinkedList<String> materias = new LinkedList<>();
+
+        materias.add("ingles");
+        materias.add("fisica");
+        materias.add("calculo");
+        materias.add("programacion");
+
+        materias.forEach(System.out::println);
+
+        materias.addFirst("Algoritmos");
+        System.out.println("\nSe agregó Algoritmos al inicio de la lista:");
+        materias.forEach(System.out::println);
+
+        materias.addLast("Inteligencia artificial");
+        materias.forEach(System.out::println);
+
+        materias.add(2, "estructura de datos");
+        System.out.println("\nLa primera materia: " + materias.getFirst());
+        System.out.println("La última materia: " + materias.getLast());
+
+        if (materias.contains("ingles")) {
+            System.out.println("La lista contiene ingles");
+        }
+
+        System.out.println("\nLista final:");
+        System.out.println(materias);
+        
+        int posicion = materias.indexOf("Algoritmos");
+        if (posicion != -1) {
+            System.out.println("La posicion es: " + materias.get(0));
+        } else {
+            System.out.println("No esta");
+        }
+
+        materias.set(materias.indexOf("calculo"), "calculo aplicado");
+        
+        System.out.println("\nLista actualizada:");
+        System.out.println(materias);
+    }
+}
