@@ -1,0 +1,124 @@
+import java.util.LinkedList;
+
+
+class Libro {
+    private String codigo;
+    private String titulo;
+    private String autor;
+    private double precio;
+
+    
+    public Libro() {}
+
+    
+    public Libro(String codigo, String titulo, String autor, double precio) {
+        this.codigo = codigo;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.precio = precio;
+    }
+
+    
+    public String getCodigo() { return codigo; }
+    public void setCodigo(String codigo) { this.codigo = codigo; }
+
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public String getAutor() { return autor; }
+    public void setAutor(String autor) { this.autor = autor; }
+
+    public double getPrecio() { return precio; }
+    public void setPrecio(double precio) { this.precio = precio; }
+
+    @Override
+    public String toString() {
+        return "Libro [código=" + codigo + ", título=" + titulo + ", autor=" + autor + ", precio=" + precio + "]";
+    }
+}
+
+public class LibroApp {
+
+    public static void main(String[] args) {
+        
+        Libro l1 = new Libro();
+        l1.setCodigo("L001");
+        l1.setTitulo("Cien Años de Soledad");
+        l1.setAutor("Gabriel García Márquez");
+        l1.setPrecio(25000.0);
+
+        Libro l2 = new Libro();
+        l2.setCodigo("L002");
+        l2.setTitulo("Don Quijote de la Mancha");
+        l2.setAutor("Miguel de Cervantes");
+        l2.setPrecio(30000.0);
+
+        Libro l3 = new Libro("L003", "El Principito", "Antoine de Saint-Exupéry", 15000.0);
+
+        Libro l4 = new Libro();
+        l4.setCodigo("L004");
+        l4.setTitulo("Fahrenheit 451");
+        l4.setAutor("Ray Bradbury");
+        l4.setPrecio(22000.0);
+
+        Libro l5 = new Libro("L005", "1984", "George Orwell", 18900.0);
+
+        
+        LinkedList<Libro> libros = new LinkedList<>();
+
+        
+        libros.add(l1);
+        libros.add(l2);
+        libros.add(l3);
+        libros.addFirst(l4); 
+        libros.addLast(l5);  
+
+        
+        System.out.println(" PUNTO 2: CONSULTAS Y TAMAÑO ");
+        System.out.println("Primer libro: " + libros.getFirst().getTitulo());
+        System.out.println("Último libro: " + libros.getLast().getTitulo());
+        System.out.println("Libro en el índice 2: " + libros.get(2).getTitulo());
+        System.out.println("Cantidad de libros en la lista: " + libros.size());
+
+        
+        System.out.println("\n PUNTO 3: RECORRER Y MOSTRAR TODOS LOS LIBROS ");
+        for (Libro l : libros) {
+            System.out.println(l.toString());
+        }
+
+        
+        System.out.println("\n PUNTO 4: BUSCAR UN LIBRO ");
+        String codigoBuscar = "L003";
+        Libro libroBuscado = null;
+
+        for (Libro l : libros) {
+            if (l.getCodigo().equalsIgnoreCase(codigoBuscar)) {
+                libroBuscado = l;
+                break;
+            }
+        }
+
+        if (libroBuscado != null) {
+            System.out.println("Libro encontrado con código " + codigoBuscar + ": " + libroBuscado.getTitulo());
+        } else {
+            System.out.println("No se encontró el libro con código " + codigoBuscar);
+        }
+
+        
+        System.out.println("\n PUNTO 5: MODIFICAR UN LIBRO ");
+        System.out.println("Precio anterior de (" + libros.getFirst().getTitulo() + "): $" + libros.getFirst().getPrecio());
+
+        libros.getFirst().setPrecio(28000.0);
+
+        System.out.println("Nuevo precio actualizado: " + libros.getFirst().getPrecio());
+
+        
+        System.out.println("\n PUNTO 6: ELIMINAR INICIO Y FINAL ");
+        Libro eliminadoInicio = libros.removeFirst();
+        Libro eliminadoFinal = libros.removeLast();
+
+        System.out.println("Elemento eliminado al inicio: " + eliminadoInicio.getTitulo());
+        System.out.println("Elemento eliminado al final: " + eliminadoFinal.getTitulo());
+        System.out.println("Nueva cantidad de elementos tras la eliminación: " + libros.size());
+    }
+}
