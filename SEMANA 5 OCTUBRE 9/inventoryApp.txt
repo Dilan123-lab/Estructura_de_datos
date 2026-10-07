@@ -1,91 +1,91 @@
-import java.util.LinkedList;
+package com.mycompany.inventoryapp;
 
-public class InventaryApp {
+import java.util.Scanner;
+
+public class InventoryApp {
 
     public static void main(String[] args) {
-        Product p1 = new Product();
-        p1.setID(1);
-        p1.setName("manzana");
-        p1.setPrice(2000.0);
-        p1.setExistence(50);
-       
-        Product p2 = new Product();
-        p2.setID(2);
-        p2.setName("banano");
-        p2.setPrice(1300.0);
-        p2.setExistence(70);
-       
-        Product p3 = new Product(3, 30, "aguacate", 6000.0);
-       
-        Product p4 = new Product();
-        p4.setID(4);
-        p4.setName("pepino");
-        p4.setPrice(2500.0);
-        p4.setExistence(59);
-       
-        Product p5 = new Product(5, 200, "lulo", 4000.0);
-       
-        System.out.println(p1.getName());
-        System.out.println(p1.getExistence());
-        
-        p1.setPrice(4000.0);
-        System.out.println(p1.toString());
-       
-        System.out.println(p2.getName());
-        System.out.println(p2.getExistence());
-        
-        p2.setPrice(2400.0);
-        System.out.println(p2.toString());
-        
-        LinkedList<Product> products = new LinkedList<>();
+        Inventory inventory = new Inventory();
+        Scanner scanner = new Scanner(System.in);
 
-        products.add(p1);
-        products.add(p2);
-        products.add(p3);
-        products.addFirst(p4);
-        products.addLast(p5);
+        // Carga inicial de datos de prueba
+        inventory.newProduct(1, "Manzana", 50, 2000.0, "Frutas");
+        inventory.newProduct(2, "Banano", 70, 1300.0, "Frutas");
+        inventory.newProduct(3, "Aguacate", 30, 6000.0, "Verduras");
 
-        System.out.println("\n PUNTO 5: CONSULTAS ");
-        System.out.println("Primer elemento: " + products.getFirst().getName());
-        System.out.println("Último elemento: " + products.getLast().getName());
-        System.out.println("Elemento en el índice 2: " + products.get(2).getName());
-        System.out.println("Cantidad de elementos en la lista: " + products.size());
+        int option = 0;
 
-        System.out.println("\n PUNTO 6: RECORRER LA LISTA ");
-        for (Product p : products) {
-            System.out.println(p.toString());
-        }
+        do {
+            System.out.println("\n----- MENÚ DE INVENTARIO -----");
+            System.out.println("1. Agregar producto nuevo");
+            System.out.println("2. Aumentar existencia (+1)");
+            System.out.println("3. Actualizar precio");
+            System.out.println("4. Consultar producto por ID");
+            System.out.println("5. Eliminar producto");
+            System.out.println("6. Mostrar todos los productos");
+            System.out.println("7. Salir");
+            System.out.print("Seleccione una opción: ");
+            
+            option = scanner.nextInt();
 
-        System.out.println("\n PUNTO 7: BUSCAR UN PRODUCTO ");
-        int idBuscar = 3;
-        Product productoBuscado = null;
+            switch (option) {
+                case 1:
+                    System.out.print("Ingrese ID: ");
+                    int id = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Ingrese Nombre: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Ingrese Existencias: ");
+                    int existence = scanner.nextInt();
+                    System.out.print("Ingrese Precio: ");
+                    double price = scanner.nextDouble();
+                    scanner.nextLine();
+                    System.out.print("Ingrese Categoría: ");
+                    String category = scanner.nextLine();
 
-        for (Product p : products) {
-            if (p.getID() == idBuscar) {
-                productoBuscado = p;
-                break;
+                    inventory.newProduct(id, name, existence, price, category);
+                    break;
+
+                case 2:
+                    System.out.print("Ingrese el ID del producto para aumentar existencia: ");
+                    int idAdd = scanner.nextInt();
+                    inventory.addProduct(idAdd);
+                    break;
+
+                case 3:
+                    System.out.print("Ingrese el ID del producto a actualizar precio: ");
+                    int idUp = scanner.nextInt();
+                    System.out.print("Ingrese el nuevo precio: ");
+                    double newPrice = scanner.nextDouble();
+                    inventory.updateProduct(idUp, newPrice);
+                    break;
+
+                case 4:
+                    System.out.print("Ingrese el ID del producto a consultar: ");
+                    int idSearch = scanner.nextInt();
+                    inventory.searchProduct(idSearch);
+                    break;
+
+                case 5:
+                    System.out.print("Ingrese el ID del producto a eliminar: ");
+                    int idDel = scanner.nextInt();
+                    inventory.deleteProduct(idDel);
+                    break;
+
+                case 6:
+                    inventory.printProducts();
+                    break;
+
+                case 7:
+                    System.out.println("Saliendo del programa...");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida.");
             }
-        }
 
-        if (productoBuscado != null) {
-            System.out.println("Producto encontrado con ID " + idBuscar + ": " + productoBuscado.getName());
-        } else {
-            System.out.println("No se encontró el producto con ID " + idBuscar);
-        }
+        } while (option != 7);
 
-        System.out.println("\n PUNTO 8: MODIFICAR UN PRODUCTO ");
-        System.out.println("Precio anterior del primer producto (" + products.getFirst().getName() + "): " + products.getFirst().getPrice());
-        
-        products.getFirst().setPrice(3000.0);
-        
-        System.out.println("Nuevo precio actualizado: " + products.getFirst().getPrice());
-
-        System.out.println(/n PUNTO 9: ELIMINAR INICIO Y FINAL ");
-        Product eliminadoInicio = products.removeFirst();
-        Product eliminadoFinal = products.removeLast();
-
-        System.out.println("Elemento eliminado al inicio: " + eliminadoInicio.getName());
-        System.out.println("Elemento eliminado al final: " + eliminadoFinal.getName());
-        System.out.println("Nueva cantidad de elementos tras la eliminación: " + products.size());
+        scanner.close();
     }
 }
