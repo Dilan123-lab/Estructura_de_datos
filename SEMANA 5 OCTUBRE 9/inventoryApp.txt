@@ -1,91 +1,90 @@
 package com.mycompany.inventoryapp;
 
-import java.util.Scanner;
+import java.util.Objects;
 
-public class InventoryApp {
+public class Product {
+    
+    private int ID;
+    private int Existence;
+    private String name;
+    private Double Price;
+    private String category;
 
-    public static void main(String[] args) {
-        Inventory inventory = new Inventory();
-        Scanner scanner = new Scanner(System.in);
+    // Constructor completo
+    public Product(int ID, int Existence, String name, Double Price, String category) {
+        this.ID = ID;
+        this.Existence = Existence;
+        this.name = name;
+        this.Price = Price;
+        this.category = category;
+    }
 
-        // Carga inicial de datos de prueba
-        inventory.newProduct(1, "Manzana", 50, 2000.0, "Frutas");
-        inventory.newProduct(2, "Banano", 70, 1300.0, "Frutas");
-        inventory.newProduct(3, "Aguacate", 30, 6000.0, "Verduras");
+    // Constructor vacío
+    public Product() {
+    }
 
-        int option = 0;
+    
+    public Product(int ID) {
+        this.ID = ID;
+    }
 
-        do {
-            System.out.println("\n----- MENÚ DE INVENTARIO -----");
-            System.out.println("1. Agregar producto nuevo");
-            System.out.println("2. Aumentar existencia (+1)");
-            System.out.println("3. Actualizar precio");
-            System.out.println("4. Consultar producto por ID");
-            System.out.println("5. Eliminar producto");
-            System.out.println("6. Mostrar todos los productos");
-            System.out.println("7. Salir");
-            System.out.print("Seleccione una opción: ");
-            
-            option = scanner.nextInt();
+    // Getters y Setters
+    public int getID() {
+        return ID;
+    }
 
-            switch (option) {
-                case 1:
-                    System.out.print("Ingrese ID: ");
-                    int id = scanner.nextInt();
-                    scanner.nextLine();
-                    System.out.print("Ingrese Nombre: ");
-                    String name = scanner.nextLine();
-                    System.out.print("Ingrese Existencias: ");
-                    int existence = scanner.nextInt();
-                    System.out.print("Ingrese Precio: ");
-                    double price = scanner.nextDouble();
-                    scanner.nextLine();
-                    System.out.print("Ingrese Categoría: ");
-                    String category = scanner.nextLine();
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
-                    inventory.newProduct(id, name, existence, price, category);
-                    break;
+    public int getExistence() {
+        return Existence;
+    }
 
-                case 2:
-                    System.out.print("Ingrese el ID del producto para aumentar existencia: ");
-                    int idAdd = scanner.nextInt();
-                    inventory.addProduct(idAdd);
-                    break;
+    public void setExistence(int Existence) {
+        this.Existence = Existence;
+    }
 
-                case 3:
-                    System.out.print("Ingrese el ID del producto a actualizar precio: ");
-                    int idUp = scanner.nextInt();
-                    System.out.print("Ingrese el nuevo precio: ");
-                    double newPrice = scanner.nextDouble();
-                    inventory.updateProduct(idUp, newPrice);
-                    break;
+    public String getName() {
+        return name;
+    }
 
-                case 4:
-                    System.out.print("Ingrese el ID del producto a consultar: ");
-                    int idSearch = scanner.nextInt();
-                    inventory.searchProduct(idSearch);
-                    break;
+    public void setName(String name) {
+        this.name = name;
+    }
 
-                case 5:
-                    System.out.print("Ingrese el ID del producto a eliminar: ");
-                    int idDel = scanner.nextInt();
-                    inventory.deleteProduct(idDel);
-                    break;
+    public Double getPrice() {
+        return Price;
+    }
 
-                case 6:
-                    inventory.printProducts();
-                    break;
+    public void setPrice(Double Price) {
+        this.Price = Price;
+    }
 
-                case 7:
-                    System.out.println("Saliendo del programa...");
-                    break;
+    public String getCategory() {
+        return category;
+    }
 
-                default:
-                    System.out.println("Opción no válida.");
-            }
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
-        } while (option != 7);
+    // Comparación por ID para que indexOf funcione
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return ID == product.ID;
+    }
 
-        scanner.close();
+    @Override
+    public int hashCode() {
+        return Objects.hash(ID);
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "ID=" + ID + ", nombre=" + name + ", Existencias=" + Existence + ", Precio=" + Price + ", categoria=" + category + '}';
     }
 }
