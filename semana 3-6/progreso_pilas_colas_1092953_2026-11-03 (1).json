@@ -1,0 +1,970 @@
+{
+ "app": "laboratorio-pilas-colas",
+ "v": 1,
+ "savedAt": "2026-11-03T23:25:40.148Z",
+ "data": {
+  "student": {
+   "name": "david vargas criollo",
+   "id": "1092953"
+  },
+  "ans": {
+   "r1": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:25:42.830Z"
+   },
+   "r2": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:26:01.827Z"
+   },
+   "r3": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:26:08.244Z"
+   },
+   "r4": {
+    "val": "0",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:26:36.254Z"
+   },
+   "r5": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:26:50.185Z"
+   },
+   "p1": {
+    "val": "pop: esta quitando y devolviendo a la cima. quitar el de arriba (30).\n\npeek: esta mostrando la cima sin quitarla (30).\n\nsize: esta mostrando cuantos hay (30).\n",
+    "tries": 3,
+    "ok": false,
+    "rev": true
+   },
+   "p2": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:34:59.207Z"
+   },
+   "p3": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:35:13.446Z"
+   },
+   "p4": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:35:19.180Z"
+   },
+   "a1": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:40:38.089Z"
+   },
+   "a2": {
+    "val": "3\n9\n8",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:42:14.184Z"
+   },
+   "a3": {
+    "val": "tope++;\ndatos [tope]=x;",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:44:26.830Z"
+   },
+   "a4": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:44:43.105Z"
+   },
+   "a5": {
+    "val": "10\n20\n",
+    "tries": 19,
+    "ok": false,
+    "rev": true
+   },
+   "a6": {
+    "val": "30\n20\noverflow: la pila esta llena",
+    "tries": 4,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:04:45.520Z"
+   },
+   "a7": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:54:54.512Z"
+   },
+   "a8": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:55:03.752Z"
+   },
+   "a9": {
+    "val": "10\n20\n30\n0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:56:07.204Z"
+   },
+   "a10": {
+    "val": "20\n10",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:56:30.347Z"
+   },
+   "a11": {
+    "val": "for(int i = tope; i >= 0; i--) { System.out.println(datos[i]);}",
+    "tries": 3,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:01:03.676Z"
+   },
+   "a12": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:59:17.898Z"
+   },
+   "a13": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:59:30.878Z"
+   },
+   "a14": {
+    "val": "1\n0\n2\n0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T11:59:40.593Z"
+   },
+   "a15": {
+    "val": "0",
+    "tries": 3,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:00:14.394Z"
+   },
+   "a16": {
+    "val": "if (tope == -1) { System.out.println(\"la pila esta vacia\");\nreturn -1;\n}\nreturn datos[tope];",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:02:04.613Z"
+   },
+   "a17": {
+    "val": "la pila esta vacia\n-1\n9\n9\n2",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:03:53.440Z"
+   },
+   "al1": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:06:19.468Z"
+   },
+   "al2": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:06:28.140Z"
+   },
+   "al3": {
+    "val": "10, 20\n20\n",
+    "tries": 3,
+    "ok": false,
+    "rev": true
+   },
+   "al4": {
+    "val": "lista.remove(lista.size() - 1);\n",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:08:20.793Z"
+   },
+   "al5": {
+    "val": "c\nb\na",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:08:45.861Z"
+   },
+   "al6": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:09:01.640Z"
+   },
+   "al7": {
+    "val": "[5, 15]\n[5]",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:09:35.967Z"
+   },
+   "al8": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:09:56.446Z"
+   },
+   "al9": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:10:04.653Z"
+   },
+   "ll1": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:10:33.963Z"
+   },
+   "ll2": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:10:43.137Z"
+   },
+   "ll3": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:10:50.860Z"
+   },
+   "ll4": {
+    "val": "3\n1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:11:26.809Z"
+   },
+   "ll5": {
+    "val": "Nodo nuevo = new Nodo (x);\nnuevo.siguiente = cabeza;\ncabeza = nuevo;",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:12:27.463Z"
+   },
+   "ll6": {
+    "val": "10\n20\n30\n40\nunderflow: la cola esta vacia\n-1",
+    "tries": 3,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:13:38.199Z"
+   },
+   "ll7": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:13:50.046Z"
+   },
+   "b1": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:14:12.425Z"
+   },
+   "b2": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:14:24.039Z"
+   },
+   "b3": {
+    "val": "0",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:14:45.785Z"
+   },
+   "b4": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:15:02.530Z"
+   },
+   "b5": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:15:14.287Z"
+   },
+   "i1": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:16:16.127Z"
+   },
+   "i2": {
+    "val": "1",
+    "tries": 4,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:16:50.188Z"
+   },
+   "i3": {
+    "val": "1",
+    "tries": 3,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:17:15.915Z"
+   },
+   "i4": {
+    "val": "   Queue<Integer> cola = new LinkedList<>();",
+    "tries": 4,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:20:11.565Z"
+   },
+   "i5": {
+    "val": "2\n5",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:20:25.280Z"
+   },
+   "i6": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:20:36.976Z"
+   },
+   "i7": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:20:49.040Z"
+   },
+   "i8": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:20:58.048Z"
+   },
+   "i9": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:21:07.047Z"
+   },
+   "i10": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:21:30.892Z"
+   },
+   "m1": {
+    "val": "2",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:21:56.292Z"
+   },
+   "m2": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:22:19.638Z"
+   },
+   "m3": {
+    "val": "2",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:22:36.968Z"
+   },
+   "m4": {
+    "val": "0",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:22:58.945Z"
+   },
+   "m5": {
+    "val": "0",
+    "tries": 3,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:23:11.761Z"
+   },
+   "m6": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:23:17.344Z"
+   },
+   "m7": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:23:24.108Z"
+   },
+   "m8": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:23:32.156Z"
+   },
+   "m9": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:23:41.321Z"
+   },
+   "s1": {
+    "val": "1231.5678\n1234.5678",
+    "tries": 3,
+    "ok": false,
+    "rev": true
+   },
+   "s2": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:26:00.393Z"
+   },
+   "s3": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:26:11.040Z"
+   },
+   "s4": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:26:19.084Z"
+   },
+   "s5": {
+    "val": "[1,2,3]\n3",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:27:14.602Z"
+   },
+   "e1": {
+    "val": "pila vacia\nfin",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:27:42.047Z"
+   },
+   "e2": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:27:48.918Z"
+   },
+   "e3": {
+    "val": "2",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:27:59.276Z"
+   },
+   "e4": {
+    "val": "while (!pila.isEmpty()){\nSystem.out.println(pila.pop());}",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:29:20.366Z"
+   },
+   "c2": {
+    "val": "0",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:32:09.213Z"
+   },
+   "c1": {
+    "val": "[0,1,2,3,4]\n0\n[1,2,3,4}\n 4\n1",
+    "tries": 3,
+    "ok": false,
+    "rev": true
+   },
+   "c3": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:32:22.695Z"
+   },
+   "c4": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:32:30.269Z"
+   },
+   "c5": {
+    "val": "[10,30]\n10",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:32:49.065Z"
+   },
+   "c6": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:32:57.120Z"
+   },
+   "c7": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:33:07.534Z"
+   },
+   "k2": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:33:30.177Z"
+   },
+   "k3": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:33:46.976Z"
+   },
+   "k1": {
+    "val": "true \ntrue\nfalse",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:34:10.188Z"
+   },
+   "k4": {
+    "val": "Queue<String> ascensor = new ArrayBlockingQueue<>(3);",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T12:35:06.467Z"
+   },
+   "d5": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:28:09.778Z"
+   },
+   "d6": {
+    "val": "0",
+    "tries": 3,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:28:23.612Z"
+   },
+   "d8": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:28:29.296Z"
+   },
+   "d3": {
+    "val": "Deportes\nnoticias\nnoticias\ninicio",
+    "tries": 3,
+    "ok": false,
+    "rev": true
+   },
+   "d1": {
+    "val": "[3,2,1]\n3",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:29:57.283Z"
+   },
+   "d2": {
+    "val": "Deque<String> historial = new ArrayDeque<>();",
+    "tries": 4,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:31:27.990Z"
+   },
+   "d4": {
+    "val": "[3,1,2]\n3\n1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:34:23.550Z"
+   },
+   "d7": {
+    "val": " Queue<String> turnos = new ArrayDeque<>();               ",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:35:15.664Z"
+   },
+   "n1": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:35:40.754Z"
+   },
+   "n2": {
+    "val": "3\n",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:36:08.355Z"
+   },
+   "n3": {
+    "val": "Sara\nAna\nLuis\nAna\nLuis\nSara",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:36:28.979Z"
+   },
+   "q2": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:36:59.170Z"
+   },
+   "q3": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:37:12.984Z"
+   },
+   "q4": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:37:16.718Z"
+   },
+   "q7": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:37:35.869Z"
+   },
+   "q8": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:37:42.845Z"
+   },
+   "q10": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:37:49.546Z"
+   },
+   "q11": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:37:53.565Z"
+   },
+   "q1": {
+    "val": "1\n[1,3,8,5]\n1 3 5 8",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:38:44.121Z"
+   },
+   "q5": {
+    "val": "PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:40:30.293Z"
+   },
+   "q6": {
+    "val": "uva\npera\nmanzana\nmanzana\npera\nuva",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:40:59.899Z"
+   },
+   "q9": {
+    "val": "[1,2,7,4]\n1\n[2,4,7]",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:41:23.331Z"
+   },
+   "v1": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:41:41.444Z"
+   },
+   "v2": {
+    "val": "0",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:41:53.582Z"
+   },
+   "v3": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:42:00.490Z"
+   },
+   "v4": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:42:09.618Z"
+   },
+   "v5": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:42:20.253Z"
+   },
+   "v6": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:42:26.863Z"
+   },
+   "v7": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:42:34.155Z"
+   },
+   "v8": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:42:41.404Z"
+   },
+   "v9": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:42:51.552Z"
+   },
+   "v10": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:42:59.817Z"
+   },
+   "v11": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:43:07.925Z"
+   },
+   "v12": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:43:16.257Z"
+   },
+   "v13": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:43:23.722Z"
+   },
+   "v14": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:43:36.844Z"
+   },
+   "v15": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:43:49.858Z"
+   },
+   "v16": {
+    "val": "1",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:44:00.665Z"
+   },
+   "t1": {
+    "val": "0",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:44:12.020Z"
+   },
+   "t2": {
+    "val": "true\nfalse\nfalse",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:45:06.641Z"
+   },
+   "t3": {
+    "val": "if (c == ´(´) {\npila.push (c);\n} else if ( c == ´)´) {\nif (pila.isEmpty()) {\nreturn false;\n}\npila.pop();\n}",
+    "tries": 3,
+    "ok": false,
+    "rev": true
+   },
+   "t4": {
+    "val": "true \nfalse\nfalse\ntrue",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:47:15.515Z"
+   },
+   "t5": {
+    "val": "urgencia 1\nurgencia 2\nurgencia 3\nturno Ana\nTurno Luis",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:47:52.624Z"
+   },
+   "t6": {
+    "val": "Deshacer: color rojo\nDeshacer: negrita\nQueda: escribir Hola",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:48:31.224Z"
+   },
+   "z1": {
+    "val": "0",
+    "tries": 3,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:49:23.930Z"
+   },
+   "z2": {
+    "val": "1",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:49:29.819Z"
+   },
+   "z3": {
+    "val": "2",
+    "tries": 1,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:49:39.168Z"
+   },
+   "z4": {
+    "val": "0",
+    "tries": 2,
+    "ok": true,
+    "rev": false,
+    "at": "2026-11-03T22:49:51.158Z"
+   }
+  },
+  "visited": {
+   "reglas": true,
+   "pila": true,
+   "inicio": true,
+   "arreglo": true,
+   "arraylist": true,
+   "enlazada": true,
+   "bigo": true,
+   "interfaz": true,
+   "mapa": true,
+   "stack": true,
+   "excepciones": true,
+   "cola": true,
+   "capacidad": true,
+   "deque": true,
+   "nofifo": true,
+   "prioridad": true,
+   "repaso": true,
+   "reto": true,
+   "cierre": true,
+   "reporte": true
+  },
+  "reflection": "",
+  "cur": "reporte",
+  "started": "2026-11-03T11:25:25.714Z",
+  "savedAt": "2026-11-03T23:25:36.915Z"
+ }
+}
