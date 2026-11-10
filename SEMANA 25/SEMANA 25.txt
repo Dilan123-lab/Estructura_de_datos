@@ -1,0 +1,41 @@
+import java.util.LinkedList;
+
+public class inventary {
+  
+    public static void Main (String[]args){
+    LinkedList<String> materias=new LinkedList<>();
+   
+    materias.add ("redes");
+    materias.add ("base de datos");
+    materias.add ("arquitectura");
+    materias.add ("sistemas operativos");
+    
+    materias.forEach(System.out::println);
+        
+    materias.addFirst("Ciberseguridad");
+
+     System.out.println("\n Se agrego Ciberseguridad al inicio de la lista");
+    materias.forEach(System.out::println);
+    
+    materias.addLast("\n Inteligencia artificial");
+    materias.forEach(System.out::println);
+    
+        System.out.println("\nLA MATERIA QUE ESTA EN LA POSICION 3 ES: " + materias.get(3));
+        
+        //Consultar primer y ultimo elemento de la lista
+        System.out.println("\nEl primer elemento de la lista es: " + materias.getFirst());
+        System.out.println("\nEl ultimo elemento de la lista es: " + materias.getLast());
+        
+        //Confirmar si la materia REDES esta en la lista
+        if (materias.contains("Redes")){
+            System.out.println(materias.contains("Redes"));
+        }
+        else{
+            System.out.println("\nLA LISTA NO CONTIENE LA MATERIA REDES");
+        }
+        
+        //Consultar la posicion de sistemas operativos
+        System.out.println("\nLA MATERIA SISTEMAS OPERATIVOS ESTA EN LA POSICION: " + materias.indexOf("sistemas operativos"));
+        
+}
+}
